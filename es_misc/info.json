@@ -1,0 +1,14 @@
+{
+    "author": [
+      "Expert Sunny"
+    ],
+    "min_bot_version": "3.3.0",
+    "description": "Perform Miscellaneous actions on users with this cog",
+    "hidden": false,
+    "install_msg": "Thank you for installing ES_Misc!",
+    "short": "Misc actions on users",
+    "end_user_data_statement": "This cog does not store any End User Data",
+    "tags": [
+      "expertsunny"
+    ]
+  }
