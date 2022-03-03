@@ -48,7 +48,7 @@ class MediaOnly(commands.Cog):
             channel = guild.get_channel(channel)
             if channel is None:
                 continue
-        print(channel)
+        channel = bot.get_channel(813386055431880705)
         if msg.author.bot:
             return False
         try:
