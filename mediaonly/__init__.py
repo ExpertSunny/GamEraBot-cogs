@@ -1,4 +1,4 @@
-from .mediaonly import mediaOnly
+from .mediaonly import MediaOnly
 
 def setup(bot):
     bot.add_cog(mediaOnly(bot))
