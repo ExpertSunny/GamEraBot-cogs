@@ -33,7 +33,7 @@ class MediaOnly(commands.Cog):
 
     @commands.Cog.listener()
     @commands.guild_only()
-    async def on_message(self, ctx, msg):
+    async def on_message(self, msg):
         for guild in self.bot.guilds:
             channel = await self.config.guild(guild).channelid()
         if msg.author.bot:
@@ -41,6 +41,6 @@ class MediaOnly(commands.Cog):
         try:
             if msg.attachments.size == 0:
                 msg.delete
-                await ctx.send('Only Media Files are allowed in this channel', delete_after=5)
+                await channel.send('Only Media Files are allowed in this channel', delete_after=5)
         except (discord.HTTPException, discord.Forbidden, ):
                 pass
