@@ -1,6 +1,6 @@
 import discord
 import random
-from redbot.core import checks, commands
+from redbot.core import Config, checks, commands
 
 class MediaOnly(commands.Cog):
 
