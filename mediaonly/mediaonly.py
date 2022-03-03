@@ -48,11 +48,12 @@ class MediaOnly(commands.Cog):
             channel = guild.get_channel(channel)
             if channel is None:
                 continue
-        channel = bot.get_channel(813386055431880705)
+        channel = bot.get_channel(888508336918655077)
         if msg.author.bot:
             return False
         try:
             if msg.attachments == False:
+                channel.send('works')
                 msg.delete
                 await channel.send('Only Media Files are allowed in this channel', delete_after=5)
         except (discord.HTTPException, discord.Forbidden, ):
