@@ -40,6 +40,7 @@ class MediaOnly(commands.Cog):
     @commands.Cog.listener()
     @commands.guild_only()
     async def on_message_without_command(self, msg):
+        print('online')
         for guild in self.bot.guilds:
             channel = await self.config.guild(guild).channelid()
             if channel is None:
