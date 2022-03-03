@@ -11,6 +11,8 @@ class MediaOnly(commands.Cog):
         self.config.register_global(
             mute_length=300, amount=5, per=5, mod_bypass=True, logging=None
         )
+        default_guild = {"channelid": None}
+        self.config.register_guild(**default_guild)
 
     @commands.group(name="mediaonly", aliases=["mo"])
     @checks.mod_or_permissions(administrator=True)
