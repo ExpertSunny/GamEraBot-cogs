@@ -7,6 +7,10 @@ class MediaOnly(commands.Cog):
     def __init__(self, bot):
         """Initialise cog."""
         self.bot = bot
+        self.config = Config.get_conf(self, identifier=786246974985732136, force_registration=True)
+        self.config.register_global(
+            mute_length=300, amount=5, per=5, mod_bypass=True, logging=None
+        )
 
     @commands.group(name="mediaonly", aliases=["mo"])
     @checks.mod_or_permissions(administrator=True)
