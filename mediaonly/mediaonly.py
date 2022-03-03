@@ -42,7 +42,12 @@ class MediaOnly(commands.Cog):
     async def on_message_without_command(self, msg):
         for guild in self.bot.guilds:
             channel = await self.config.guild(guild).channelid()
-            print(channel)
+            channel = await self.config.guild(guild).channelid()
+            if channel is None:
+                continue
+            channel = guild.get_channel(channel)
+            if channel is None:
+                continue
         print(channel)
         if msg.author.bot:
             return False
