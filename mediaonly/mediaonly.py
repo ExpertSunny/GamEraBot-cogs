@@ -45,7 +45,6 @@ class MediaOnly(commands.Cog):
         if msg.author.bot:
             return False
         try:
-            channel.send('test')
             if msg.attachments == False:
                 msg.delete
                 await channel.send('Only Media Files are allowed in this channel', delete_after=5)
